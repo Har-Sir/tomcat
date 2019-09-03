@@ -1,4 +1,38 @@
 ## Welcome to Apache Tomcat!
+> 导入IDEA后设置 设置Application运行参数
+>
+> 1、设置main-class
+>
+> ```java
+> org.apache.catalina.startup.Bootstrap
+> ```
+>
+> 2、修改server.xml的Connector配置文件
+>
+> ```xml
+> URIEncoding="UTF-8"
+> ```
+>
+> 3、设置VM参数
+>
+> ```java
+> -Dcatalina.home=E:/Workspace/tomcat/
+> -Dcatalina.base=E:/Workspace/tomcat/
+> -Djava.endorsed.dirs=E:/Workspace/tomcat/endorsed
+> -Djava.io.tmpdir=E:/Workspace/tomcat/temp
+> -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+> -Djava.util.logging.config.file=E:/Workspace/tomcat/conf/logging.properties
+> -Dfile.encoding=UTF-8
+> ```
+>
+> 4、Maven运行命令：
+>
+> ```xml
+> mvn -Dmaven.test.skip=true=true clean compile package
+> ```
+>
+>
+
 
 ### What Is It?
 
